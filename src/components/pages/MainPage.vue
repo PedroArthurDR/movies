@@ -37,7 +37,7 @@
       <div class="movieTitle">
         {{ movie.title.toUpperCase() }}
         <transition name="fade" style="width: 100%;"  mode="out-in">
-          <div   v-if="hoveredIndex === index" class="movieGenres" style="margin-top: 0px">
+          <div   v-if="hoveredIndex === index" class="movieGenresTitle" style="margin-top: 0px">
             <span v-for="genreId in movie.genre_ids" :key="genreId" style="color: #B4B4B4;">
               {{ getGenreName(genreId) }}{{ $last ? '' : ', ' }}
           </span>
@@ -205,7 +205,7 @@ export default {
 }
 </script>
 
-<style>
+<style >
 .n-button{
  border:none !important;
 }
@@ -361,7 +361,7 @@ export default {
   transition: 1s;
   backdrop-filter: blur(4px);
 }
-.movieGenres{
+.movieGenresTitle{
   font-size: 12px;
   font-weight: 200;
 }
